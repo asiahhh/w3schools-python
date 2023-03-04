@@ -88,4 +88,15 @@ myfunc()
 print('good ' + x) # prints good night
 
 # global keyword
-def myfunc
+def myfunc():
+  global x
+  x = 'morning'
+myfunc()
+print('good ' + x)
+# and
+x = 'morning'
+def myfunc():
+  global x
+  x = 'night'
+myfunc()
+print('good ' + x) # prints good night only
